@@ -22,7 +22,7 @@ const systemPrompt = endent`
   Code (no \`\`\`):
   `;
 
-export const OpenAIStream = async (
+export const streamOpenAI = async (
   messages: Message[],
   model: string,
   key: string
