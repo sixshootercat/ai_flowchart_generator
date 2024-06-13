@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-white font-sans text-slate-900 antialiased flex flex-col",
+          "min-h-screen bg-white font-sans text-slate-900 antialiased flex flex-col px-4 py-2 max-w-5xl mx-auto",
           fontSans.variable
         )}
       >
