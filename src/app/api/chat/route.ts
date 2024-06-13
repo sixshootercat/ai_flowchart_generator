@@ -1,4 +1,4 @@
-import { streamOpenAI } from "@/lib/utils";
+import { streamGemini } from "@/lib/gemini";
 import { type RequestBody } from "@/types/type";
 
 export const config = {
@@ -7,9 +7,9 @@ export const config = {
 
 export async function POST(req: Request) {
   try {
-    const { messages, model, apiKey } = (await req.json()) as RequestBody;
+    const { messages } = (await req.json()) as RequestBody;
 
-    const stream = await streamOpenAI(messages, model, apiKey);
+    const stream = await streamGemini(messages);
 
     return new Response(stream);
   } catch (error) {
