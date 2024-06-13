@@ -3,8 +3,8 @@ import Link from "next/link";
 import { NavItem } from "@/types/type";
 import { siteConfig } from "@/config/site.config";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/app/components/icons";
-import { Button } from "@/app/components/ui/button";
+import { Icons } from "./icons";
+import { Button } from "./ui/button";
 
 interface MainNavProps {
   items?: NavItem[];

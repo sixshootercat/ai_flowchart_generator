@@ -1,15 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { Key } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
-import { Icons } from "@/app/components/icons";
-import { MainNav } from "@/app/components/main-nav";
-import { buttonVariants } from "@/app/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/app/components/ui/popover";
-import { APIKeyInput } from "@/app/components/api-key-input";
+import { Icons } from "./icons";
+import { MainNav } from "./main-nav";
+import { buttonVariants } from "./ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 export const Header = () => {
   return (
@@ -50,22 +47,6 @@ export const Header = () => {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
-            <Popover>
-              <PopoverTrigger>
-                <div
-                  className={buttonVariants({
-                    size: "sm",
-                    variant: "ghost",
-                    className: "text-slate-700",
-                  })}
-                >
-                  <Key className="h-5 w-5" />
-                </div>
-              </PopoverTrigger>
-              <PopoverContent>
-                <APIKeyInput />
-              </PopoverContent>
-            </Popover>
           </nav>
         </div>
       </div>
