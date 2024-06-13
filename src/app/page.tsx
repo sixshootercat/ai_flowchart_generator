@@ -69,7 +69,7 @@ export default function Home() {
     <main className="container flex-1 w-full flex flex-wrap">
       <div className="flex border md:border-r-0 flex-col justify-between w-full md:w-1/2">
         <div className="">
-          <div className="">
+          <div className="max-h-[90vh] overflow-auto">
             {messages.map((message, idx) => {
               return <ChatMessage key={idx} message={message} />;
             })}
@@ -85,8 +85,8 @@ export default function Home() {
       </div>
       <div className="border w-full md:w-1/2 p-2 flex flex-col">
         <CodeBlock code={draftOutputCode} />
-        <div className="flex-1 flex justify-center border relative">
-          <Mermaid chart={outputCode} />
+        <div className="border relative h-[50%] max-h-[50%]">
+          {outputCode && <Mermaid chart={outputCode} />}
         </div>
       </div>
     </main>
