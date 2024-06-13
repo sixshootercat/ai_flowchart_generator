@@ -1,13 +1,13 @@
 "server only";
 
-import { GenerativeModel, GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import endent from "endent";
 
 const systemPrompt = endent`
 You are an assistant that helps users build diagrams using Mermaid.
 You only need to return the output Mermaid code block.
-Do not include any description, do not include the \`\`\`.
-Code (no \`\`\`):
+Do not include any description. Do not include the \`\`\` or \`\`\`mermaid in the output.
+It is important the output is a valid Mermaid code block
 `;
 
 export const streamGemini = async (messages: string[]) => {
